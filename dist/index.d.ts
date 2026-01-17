@@ -1,10 +1,7 @@
-// schemas
 export { ImageAssetSchema } from "./image.schema";
 export { HeroSchema } from "./hero.schema";
 export { ShopByCategorySchema } from "./shopByCategory.schema";
 export { ShopByPersonSchema } from "./shopByPerson.schema";
-
-// types
 export type { ImageAsset } from "./image.schema";
 export type { HeroSection } from "./hero.schema";
 export type { ShopByCategorySection } from "./shopByCategory.schema";
