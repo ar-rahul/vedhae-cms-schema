@@ -24,30 +24,30 @@ export declare const HeroSectionSchema: z.ZodObject<{
 }, "strip", z.ZodTypeAny, {
     page: "home";
     section: "hero";
+    title: string;
     active: boolean;
     tagline: string;
-    title: string;
     ctaText: string;
     ctaLink: string;
-    description?: string | undefined;
     image?: {
         url: string;
         path: string;
         alt: string;
     } | undefined;
+    description?: string | undefined;
 }, {
     page: "home";
     section: "hero";
+    title: string;
     active: boolean;
     tagline: string;
-    title: string;
     ctaText: string;
     ctaLink: string;
-    description?: string | undefined;
     image?: {
         url: string;
         path: string;
         alt: string;
     } | undefined;
+    description?: string | undefined;
 }>;
 export type HeroSection = z.infer<typeof HeroSectionSchema>;

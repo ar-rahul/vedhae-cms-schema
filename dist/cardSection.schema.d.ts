@@ -1,5 +1,5 @@
 import { z } from "zod";
-export declare const ShopByCategoryItemSchema: z.ZodObject<{
+export declare const CardItemSchema: z.ZodObject<{
     name: z.ZodString;
     link: z.ZodString;
     order: z.ZodNumber;
@@ -17,30 +17,31 @@ export declare const ShopByCategoryItemSchema: z.ZodObject<{
         alt: string;
     }>;
 }, "strip", z.ZodTypeAny, {
+    name: string;
+    link: string;
+    order: number;
     image: {
         url: string;
         path: string;
         alt: string;
     };
-    name: string;
-    link: string;
-    order: number;
 }, {
+    name: string;
+    link: string;
+    order: number;
     image: {
         url: string;
         path: string;
         alt: string;
     };
-    name: string;
-    link: string;
-    order: number;
 }>;
-export declare const ShopByCategorySchema: z.ZodObject<{
+export declare const CardSectionSchema: z.ZodObject<{
     page: z.ZodLiteral<"home">;
-    section: z.ZodLiteral<"shopByCategory">;
-    active: z.ZodBoolean;
+    section: z.ZodEnum<["one", "two"]>;
     title: z.ZodString;
-    categories: z.ZodArray<z.ZodObject<{
+    order: z.ZodNumber;
+    active: z.ZodBoolean;
+    items: z.ZodArray<z.ZodObject<{
         name: z.ZodString;
         link: z.ZodString;
         order: z.ZodNumber;
@@ -58,53 +59,55 @@ export declare const ShopByCategorySchema: z.ZodObject<{
             alt: string;
         }>;
     }, "strip", z.ZodTypeAny, {
+        name: string;
+        link: string;
+        order: number;
         image: {
             url: string;
             path: string;
             alt: string;
         };
-        name: string;
-        link: string;
-        order: number;
     }, {
+        name: string;
+        link: string;
+        order: number;
         image: {
             url: string;
             path: string;
             alt: string;
         };
-        name: string;
-        link: string;
-        order: number;
     }>, "many">;
 }, "strip", z.ZodTypeAny, {
+    order: number;
     page: "home";
-    section: "shopByCategory";
-    active: boolean;
+    section: "one" | "two";
     title: string;
-    categories: {
+    active: boolean;
+    items: {
+        name: string;
+        link: string;
+        order: number;
         image: {
             url: string;
             path: string;
             alt: string;
         };
-        name: string;
-        link: string;
-        order: number;
     }[];
 }, {
+    order: number;
     page: "home";
-    section: "shopByCategory";
-    active: boolean;
+    section: "one" | "two";
     title: string;
-    categories: {
+    active: boolean;
+    items: {
+        name: string;
+        link: string;
+        order: number;
         image: {
             url: string;
             path: string;
             alt: string;
         };
-        name: string;
-        link: string;
-        order: number;
     }[];
 }>;
-export type ShopByCategorySection = z.infer<typeof ShopByCategorySchema>;
+export type CardSection = z.infer<typeof CardSectionSchema>;

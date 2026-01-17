@@ -1,21 +1,20 @@
 import { z } from "zod";
 import { ImageAssetSchema } from "./image.schema.js";
 
-export const SectionItemSchema = z.object({
-  id: z.string().optional(), // useful later
-  title: z.string(),
+export const CardItemSchema = z.object({
+  name: z.string(),
   link: z.string(),
-  order: z.number().int().min(1),
+  order: z.number(),
   image: ImageAssetSchema,
 });
 
 export const CardSectionSchema = z.object({
   page: z.literal("home"),
-  section: z.string(), // shopByCategory / shopByPerson
+  section: z.enum(["one", "two"]),
   title: z.string(),
-  order: z.number().int().min(1),
+  order: z.number(),
   active: z.boolean(),
-  items: z.array(SectionItemSchema),
+  items: z.array(CardItemSchema),
 });
 
 export type CardSection = z.infer<typeof CardSectionSchema>;
