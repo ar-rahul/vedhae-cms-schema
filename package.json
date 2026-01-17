@@ -1,6 +1,6 @@
 {
   "name": "@vedhae/cms-schema",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -10,16 +10,13 @@
       "default": "./dist/index.js"
     }
   },
-
   "peerDependencies": {
     "zod": "^3.22.0"
   },
-
   "devDependencies": {
     "zod": "^3.22.0",
     "typescript": "^5.0.0"
   },
-
   "files": [
     "dist"
   ],
