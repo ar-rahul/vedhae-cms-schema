@@ -10,6 +10,16 @@
       "default": "./dist/index.js"
     }
   },
+
+  "peerDependencies": {
+    "zod": "^3.22.0"
+  },
+
+  "devDependencies": {
+    "zod": "^3.22.0",
+    "typescript": "^5.0.0"
+  },
+
   "files": [
     "dist"
   ],
