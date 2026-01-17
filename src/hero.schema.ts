@@ -1,11 +1,7 @@
 import { z } from "zod";
 import { ImageAssetSchema } from "./image.schema";
 
-/**
- * Canonical Hero CMS shape
- * This is what admin, worker, frontend agree on
- */
-export const HeroSchema = z.object({
+export const HeroSectionSchema = z.object({
   page: z.literal("home"),
   section: z.literal("hero"),
   active: z.boolean(),
@@ -20,4 +16,4 @@ export const HeroSchema = z.object({
   image: ImageAssetSchema.optional(),
 });
 
-export type HeroSection = z.infer<typeof HeroSchema>;
+export type HeroSection = z.infer<typeof HeroSectionSchema>;

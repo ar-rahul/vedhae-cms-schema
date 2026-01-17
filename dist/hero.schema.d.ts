@@ -1,9 +1,5 @@
 import { z } from "zod";
-/**
- * Canonical Hero CMS shape
- * This is what admin, worker, frontend agree on
- */
-export declare const HeroSchema: z.ZodObject<{
+export declare const HeroSectionSchema: z.ZodObject<{
     page: z.ZodLiteral<"home">;
     section: z.ZodLiteral<"hero">;
     active: z.ZodBoolean;
@@ -18,4 +14,4 @@ export declare const HeroSchema: z.ZodObject<{
         alt: z.ZodString;
     }, z.core.$strip>>;
 }, z.core.$strip>;
-export type HeroSection = z.infer<typeof HeroSchema>;
+export type HeroSection = z.infer<typeof HeroSectionSchema>;
