@@ -1,28 +1,25 @@
 {
   "name": "@vedhae/cms-schema",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
-
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "default": "./dist/index.js"
     }
   },
-
   "peerDependencies": {
     "zod": "^3.25.0"
   },
-
   "devDependencies": {
     "zod": "^3.25.0",
     "typescript": "^5.0.0"
   },
-
-  "files": ["dist"],
-
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "build": "tsc"
   }
