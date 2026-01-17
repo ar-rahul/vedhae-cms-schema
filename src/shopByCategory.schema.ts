@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ImageAssetSchema } from "./image.schema";
+import { ImageAssetSchema } from "./image.schema.js";
 
 export const ShopByCategoryItemSchema = z.object({
   name: z.string().min(1),

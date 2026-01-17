@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { ImageAssetSchema } from "./image.schema";
+import { ImageAssetSchema } from "./image.schema.js";
 export const HeroSectionSchema = z.object({
     page: z.literal("home"),
     section: z.literal("hero"),
