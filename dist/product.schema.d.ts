@@ -8,6 +8,7 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     titleDescription: z.ZodString;
     size: z.ZodString;
     users: z.ZodArray<z.ZodString, "many">;
+    categories: z.ZodArray<z.ZodString, "many">;
     internalLink: z.ZodString;
     externalLink: z.ZodOptional<z.ZodString>;
     price: z.ZodNumber;
@@ -49,6 +50,7 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     titleDescription: string;
     size: string;
     users: string[];
+    categories: string[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -76,6 +78,7 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     titleDescription: string;
     size: string;
     users: string[];
+    categories: string[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -103,6 +106,7 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     titleDescription: string;
     size: string;
     users: string[];
+    categories: string[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -130,6 +134,7 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     titleDescription: string;
     size: string;
     users: string[];
+    categories: string[];
     internalLink: string;
     price: number;
     stockStatus: boolean;

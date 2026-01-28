@@ -13,9 +13,13 @@ export const ProductSchema = z
     titleDescription: z.string().min(1),
     size: z.string().min(1),
     /* =========================
-       Audience & navigation
+       Audience & classification
     ========================= */
     users: z.array(z.string()).min(1),
+    categories: z.array(z.string()).min(1),
+    /* =========================
+       Navigation
+    ========================= */
     internalLink: z.string().startsWith("/"),
     externalLink: z.string().url().optional(),
     /* =========================
