@@ -8,12 +8,12 @@ export declare const CardItemSchema: z.ZodObject<{
         path: z.ZodString;
         alt: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }, {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }>;
 }, "strip", z.ZodTypeAny, {
@@ -21,8 +21,8 @@ export declare const CardItemSchema: z.ZodObject<{
     link: string;
     order: number;
     image: {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     };
 }, {
@@ -30,8 +30,8 @@ export declare const CardItemSchema: z.ZodObject<{
     link: string;
     order: number;
     image: {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     };
 }>;
@@ -50,12 +50,12 @@ export declare const CardSectionSchema: z.ZodObject<{
             path: z.ZodString;
             alt: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            url: string;
             path: string;
+            url: string;
             alt: string;
         }, {
-            url: string;
             path: string;
+            url: string;
             alt: string;
         }>;
     }, "strip", z.ZodTypeAny, {
@@ -63,8 +63,8 @@ export declare const CardSectionSchema: z.ZodObject<{
         link: string;
         order: number;
         image: {
-            url: string;
             path: string;
+            url: string;
             alt: string;
         };
     }, {
@@ -72,40 +72,40 @@ export declare const CardSectionSchema: z.ZodObject<{
         link: string;
         order: number;
         image: {
-            url: string;
             path: string;
+            url: string;
             alt: string;
         };
     }>, "many">;
 }, "strip", z.ZodTypeAny, {
+    title: string;
     order: number;
     page: "home";
     section: "one" | "two";
-    title: string;
     active: boolean;
     items: {
         name: string;
         link: string;
         order: number;
         image: {
-            url: string;
             path: string;
+            url: string;
             alt: string;
         };
     }[];
 }, {
+    title: string;
     order: number;
     page: "home";
     section: "one" | "two";
-    title: string;
     active: boolean;
     items: {
         name: string;
         link: string;
         order: number;
         image: {
-            url: string;
             path: string;
+            url: string;
             alt: string;
         };
     }[];

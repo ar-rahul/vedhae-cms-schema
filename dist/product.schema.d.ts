@@ -20,12 +20,12 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
         path: z.ZodString;
         alt: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }, {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }>, "many">;
     aboutTitle: z.ZodString;
@@ -43,8 +43,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     createdAt: z.ZodNumber;
     updatedAt: z.ZodNumber;
 }, "strip", z.ZodTypeAny, {
-    order: number;
     title: string;
+    order: number;
     active: boolean;
     id: string;
     titleDescription: string;
@@ -56,8 +56,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     stockStatus: boolean;
     stockVolume: number;
     imageLinks: {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }[];
     aboutTitle: string;
@@ -71,8 +71,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     externalLink?: string | undefined;
     priceSubText?: string | undefined;
 }, {
-    order: number;
     title: string;
+    order: number;
     active: boolean;
     id: string;
     titleDescription: string;
@@ -84,8 +84,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     stockStatus: boolean;
     stockVolume: number;
     imageLinks: {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }[];
     aboutTitle: string;
@@ -99,8 +99,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     externalLink?: string | undefined;
     priceSubText?: string | undefined;
 }>, {
-    order: number;
     title: string;
+    order: number;
     active: boolean;
     id: string;
     titleDescription: string;
@@ -112,8 +112,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     stockStatus: boolean;
     stockVolume: number;
     imageLinks: {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }[];
     aboutTitle: string;
@@ -127,8 +127,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     externalLink?: string | undefined;
     priceSubText?: string | undefined;
 }, {
-    order: number;
     title: string;
+    order: number;
     active: boolean;
     id: string;
     titleDescription: string;
@@ -140,8 +140,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     stockStatus: boolean;
     stockVolume: number;
     imageLinks: {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }[];
     aboutTitle: string;

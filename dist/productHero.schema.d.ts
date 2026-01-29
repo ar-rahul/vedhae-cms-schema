@@ -17,18 +17,18 @@ export declare const ProductHeroSchema: z.ZodObject<{
         path: z.ZodString;
         alt: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }, {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     }>;
 }, "strip", z.ZodTypeAny, {
     image: {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     };
     page: "products";
@@ -39,8 +39,8 @@ export declare const ProductHeroSchema: z.ZodObject<{
     };
 }, {
     image: {
-        url: string;
         path: string;
+        url: string;
         alt: string;
     };
     page: "products";
