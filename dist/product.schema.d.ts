@@ -7,8 +7,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     title: z.ZodString;
     titleDescription: z.ZodString;
     size: z.ZodString;
-    users: z.ZodArray<z.ZodString, "many">;
-    categories: z.ZodArray<z.ZodString, "many">;
+    users: z.ZodArray<z.ZodEnum<["men", "women", "kids", "adults", "teens"]>, "many">;
+    categories: z.ZodArray<z.ZodEnum<["face", "lip", "face-lips", "body", "hair"]>, "many">;
     internalLink: z.ZodString;
     externalLink: z.ZodOptional<z.ZodString>;
     price: z.ZodNumber;
@@ -33,10 +33,6 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     howToUseTitle: z.ZodString;
     howToUseDescription: z.ZodString;
     ingredientsTitle: z.ZodString;
-    /**
-     * Each ingredient item:
-     * [ingredientName, ingredientDescription]
-     */
     ingredients: z.ZodArray<z.ZodTuple<[z.ZodString, z.ZodString], null>, "many">;
     active: z.ZodBoolean;
     order: z.ZodNumber;
@@ -49,8 +45,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     id: string;
     titleDescription: string;
     size: string;
-    users: string[];
-    categories: string[];
+    users: ("men" | "women" | "kids" | "adults" | "teens")[];
+    categories: ("face" | "lip" | "face-lips" | "body" | "hair")[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -77,8 +73,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     id: string;
     titleDescription: string;
     size: string;
-    users: string[];
-    categories: string[];
+    users: ("men" | "women" | "kids" | "adults" | "teens")[];
+    categories: ("face" | "lip" | "face-lips" | "body" | "hair")[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -105,8 +101,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     id: string;
     titleDescription: string;
     size: string;
-    users: string[];
-    categories: string[];
+    users: ("men" | "women" | "kids" | "adults" | "teens")[];
+    categories: ("face" | "lip" | "face-lips" | "body" | "hair")[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -133,8 +129,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     id: string;
     titleDescription: string;
     size: string;
-    users: string[];
-    categories: string[];
+    users: ("men" | "women" | "kids" | "adults" | "teens")[];
+    categories: ("face" | "lip" | "face-lips" | "body" | "hair")[];
     internalLink: string;
     price: number;
     stockStatus: boolean;

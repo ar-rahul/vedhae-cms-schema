@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { ImageAssetSchema } from "./image.schema.js";
+import { ProductCategorySchema, ProductUserSchema, } from "./product.meta.js";
 /**
  * Product schema
  */
@@ -15,8 +16,8 @@ export const ProductSchema = z
     /* =========================
        Audience & classification
     ========================= */
-    users: z.array(z.string()).min(1),
-    categories: z.array(z.string()).min(1),
+    users: z.array(ProductUserSchema).min(1),
+    categories: z.array(ProductCategorySchema).min(1),
     /* =========================
        Navigation
     ========================= */
@@ -41,10 +42,6 @@ export const ProductSchema = z
     howToUseTitle: z.string().min(1),
     howToUseDescription: z.string().min(1),
     ingredientsTitle: z.string().min(1),
-    /**
-     * Each ingredient item:
-     * [ingredientName, ingredientDescription]
-     */
     ingredients: z.array(z.tuple([z.string(), z.string()])).min(1),
     /* =========================
        System fields
@@ -55,10 +52,6 @@ export const ProductSchema = z
     updatedAt: z.number(),
 })
     .superRefine((data, ctx) => {
-    /**
-     * Enforce stock logic:
-     * If stockStatus is false, stockVolume must be 0
-     */
     if (data.stockStatus === false && data.stockVolume !== 0) {
         ctx.addIssue({
             path: ["stockVolume"],
