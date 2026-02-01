@@ -11,12 +11,7 @@ export { CardSectionSchema } from "./cardSection.schema.js";
 export { ProductSchema } from "./product.schema.js";
 export { ProductHeroSchema } from "./productHero.schema.js";
 
-// Product meta (ROUTES / CATEGORIES / USERS)
-export {
-  ProductCategorySchema,
-  ProductUserSchema,
-  ProductRouteSchema,
-} from "./product.meta.js";
+
 
 // About
 export {
@@ -39,13 +34,7 @@ export type { CardSection } from "./cardSection.schema.js";
 export type { Product } from "./product.schema.js";
 export type { ProductHero } from "./productHero.schema.js";
 
-// Product meta types
-export type {
-  ProductCategory,
-  ProductUser,
-  ProductRoute,
-  RouteConfig,
-} from "./product.meta.js";
+
 
 // About
 export type {

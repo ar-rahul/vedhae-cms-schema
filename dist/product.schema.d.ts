@@ -7,11 +7,12 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     title: z.ZodString;
     titleDescription: z.ZodString;
     size: z.ZodString;
-    users: z.ZodArray<z.ZodEnum<["men", "women", "kids", "adults", "teens"]>, "many">;
-    categories: z.ZodArray<z.ZodEnum<["face", "lip", "face-lips", "body", "hair"]>, "many">;
+    users: z.ZodArray<z.ZodString, "many">;
+    categories: z.ZodArray<z.ZodString, "many">;
     internalLink: z.ZodString;
     externalLink: z.ZodOptional<z.ZodString>;
     price: z.ZodNumber;
+    discountPercent: z.ZodOptional<z.ZodNumber>;
     priceSubText: z.ZodOptional<z.ZodString>;
     stockStatus: z.ZodBoolean;
     stockVolume: z.ZodNumber;
@@ -45,8 +46,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     id: string;
     titleDescription: string;
     size: string;
-    users: ("men" | "women" | "kids" | "adults" | "teens")[];
-    categories: ("face" | "lip" | "face-lips" | "body" | "hair")[];
+    users: string[];
+    categories: string[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -65,6 +66,7 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     createdAt: number;
     updatedAt: number;
     externalLink?: string | undefined;
+    discountPercent?: number | undefined;
     priceSubText?: string | undefined;
 }, {
     title: string;
@@ -73,8 +75,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     id: string;
     titleDescription: string;
     size: string;
-    users: ("men" | "women" | "kids" | "adults" | "teens")[];
-    categories: ("face" | "lip" | "face-lips" | "body" | "hair")[];
+    users: string[];
+    categories: string[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -93,6 +95,7 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     createdAt: number;
     updatedAt: number;
     externalLink?: string | undefined;
+    discountPercent?: number | undefined;
     priceSubText?: string | undefined;
 }>, {
     title: string;
@@ -101,8 +104,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     id: string;
     titleDescription: string;
     size: string;
-    users: ("men" | "women" | "kids" | "adults" | "teens")[];
-    categories: ("face" | "lip" | "face-lips" | "body" | "hair")[];
+    users: string[];
+    categories: string[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -121,6 +124,7 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     createdAt: number;
     updatedAt: number;
     externalLink?: string | undefined;
+    discountPercent?: number | undefined;
     priceSubText?: string | undefined;
 }, {
     title: string;
@@ -129,8 +133,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     id: string;
     titleDescription: string;
     size: string;
-    users: ("men" | "women" | "kids" | "adults" | "teens")[];
-    categories: ("face" | "lip" | "face-lips" | "body" | "hair")[];
+    users: string[];
+    categories: string[];
     internalLink: string;
     price: number;
     stockStatus: boolean;
@@ -149,6 +153,7 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     createdAt: number;
     updatedAt: number;
     externalLink?: string | undefined;
+    discountPercent?: number | undefined;
     priceSubText?: string | undefined;
 }>;
 export type Product = z.infer<typeof ProductSchema>;
