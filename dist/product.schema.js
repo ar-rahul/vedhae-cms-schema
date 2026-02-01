@@ -1,6 +1,5 @@
 import { z } from "zod";
 import { ImageAssetSchema } from "./image.schema.js";
-import { ProductCategorySchema, ProductUserSchema, } from "./product.meta.js";
 /**
  * Product schema
  */
@@ -16,8 +15,8 @@ export const ProductSchema = z
     /* =========================
        Audience & classification
     ========================= */
-    users: z.array(ProductUserSchema).min(1),
-    categories: z.array(ProductCategorySchema).min(1),
+    users: z.array(z.string()).min(1),
+    categories: z.array(z.string()).min(1),
     /* =========================
        Navigation
     ========================= */

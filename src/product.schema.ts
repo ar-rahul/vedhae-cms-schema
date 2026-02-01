@@ -1,9 +1,5 @@
 import { z } from "zod";
 import { ImageAssetSchema } from "./image.schema.js";
-import {
-  ProductCategorySchema,
-  ProductUserSchema,
-} from "./product.meta.js";
 
 /**
  * Product schema
@@ -17,14 +13,13 @@ export const ProductSchema = z
 
     title: z.string().min(1),
     titleDescription: z.string().min(1),
-
     size: z.string().min(1),
 
     /* =========================
        Audience & classification
     ========================= */
-    users: z.array(ProductUserSchema).min(1),
-    categories: z.array(ProductCategorySchema).min(1),
+    users: z.array(z.string()).min(1),
+    categories: z.array(z.string()).min(1),
 
     /* =========================
        Navigation
@@ -33,11 +28,21 @@ export const ProductSchema = z
     externalLink: z.string().url().optional(),
 
     /* =========================
-       Pricing & availability
+       Pricing
     ========================= */
     price: z.number().nonnegative(),
+
+    discountPercent: z
+      .number()
+      .min(0)
+      .max(100)
+      .optional(),
+
     priceSubText: z.string().optional(),
 
+    /* =========================
+       Stock
+    ========================= */
     stockStatus: z.boolean(),
     stockVolume: z.number().int().nonnegative(),
 
@@ -56,13 +61,12 @@ export const ProductSchema = z
     howToUseDescription: z.string().min(1),
 
     ingredientsTitle: z.string().min(1),
-
     ingredients: z.array(
       z.tuple([z.string(), z.string()])
     ).min(1),
 
     /* =========================
-       System fields
+       System
     ========================= */
     active: z.boolean(),
     order: z.number(),
@@ -71,13 +75,23 @@ export const ProductSchema = z
     updatedAt: z.number(),
   })
   .superRefine((data, ctx) => {
-    if (data.stockStatus === false && data.stockVolume !== 0) {
+    // stock logic
+    if (!data.stockStatus && data.stockVolume !== 0) {
       ctx.addIssue({
         path: ["stockVolume"],
         message: "stockVolume must be 0 when stockStatus is false",
         code: z.ZodIssueCode.custom,
       });
     }
+
+    // discount sanity
+    if (data.discountPercent && data.discountPercent > 0 && data.price === 0) {
+      ctx.addIssue({
+        path: ["discountPercent"],
+        message: "Discount cannot be applied when price is 0",
+        code: z.ZodIssueCode.custom,
+      });
+    }
   });
 
-  export type Product = z.infer<typeof ProductSchema>;
+export type Product = z.infer<typeof ProductSchema>;
