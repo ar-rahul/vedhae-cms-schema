@@ -2,10 +2,13 @@
    SCHEMAS
 ====================================================== */
 
-// Core
+// Home
 export { ImageAssetSchema } from "./image.schema.js";
 export { HeroSectionSchema } from "./hero.schema.js";
 export { CardSectionSchema } from "./cardSection.schema.js";
+export { HomeDividerSchema } from "./homeDivider.schema.js";
+
+
 
 // Products
 export { ProductSchema } from "./product.schema.js";
@@ -25,10 +28,13 @@ export {
    TYPES
 ====================================================== */
 
-// Core
+// Home
 export type { ImageAsset } from "./image.schema.js";
 export type { HeroSection } from "./hero.schema.js";
 export type { CardSection } from "./cardSection.schema.js";
+export type { HomeDivider } from "./homeDivider.schema.js";
+
+
 
 // Products
 export type { Product } from "./product.schema.js";
