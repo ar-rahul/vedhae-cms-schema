@@ -13,7 +13,7 @@ export const HeroSectionSchema = z.object({
   ctaText: z.string().min(1),
   ctaLink: z.string().min(1),
 
-  image: ImageAssetSchema.optional(),
+ imageLinks: z.array(ImageAssetSchema).default([]),
 });
 
 export type HeroSection = z.infer<typeof HeroSectionSchema>;
