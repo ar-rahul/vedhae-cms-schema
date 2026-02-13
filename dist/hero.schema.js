@@ -9,5 +9,5 @@ export const HeroSectionSchema = z.object({
     description: z.string().optional(),
     ctaText: z.string().min(1),
     ctaLink: z.string().min(1),
-    image: ImageAssetSchema.optional(),
+    imageLinks: z.array(ImageAssetSchema).default([]),
 });

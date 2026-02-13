@@ -43,6 +43,11 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     title: string;
     order: number;
     active: boolean;
+    imageLinks: {
+        path: string;
+        url: string;
+        alt: string;
+    }[];
     id: string;
     titleDescription: string;
     size: string;
@@ -52,11 +57,6 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     price: number;
     stockStatus: boolean;
     stockVolume: number;
-    imageLinks: {
-        path: string;
-        url: string;
-        alt: string;
-    }[];
     aboutTitle: string;
     aboutDescription: string;
     howToUseTitle: string;
@@ -72,6 +72,11 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     title: string;
     order: number;
     active: boolean;
+    imageLinks: {
+        path: string;
+        url: string;
+        alt: string;
+    }[];
     id: string;
     titleDescription: string;
     size: string;
@@ -81,11 +86,6 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     price: number;
     stockStatus: boolean;
     stockVolume: number;
-    imageLinks: {
-        path: string;
-        url: string;
-        alt: string;
-    }[];
     aboutTitle: string;
     aboutDescription: string;
     howToUseTitle: string;
@@ -101,6 +101,11 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     title: string;
     order: number;
     active: boolean;
+    imageLinks: {
+        path: string;
+        url: string;
+        alt: string;
+    }[];
     id: string;
     titleDescription: string;
     size: string;
@@ -110,11 +115,6 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     price: number;
     stockStatus: boolean;
     stockVolume: number;
-    imageLinks: {
-        path: string;
-        url: string;
-        alt: string;
-    }[];
     aboutTitle: string;
     aboutDescription: string;
     howToUseTitle: string;
@@ -130,6 +130,11 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     title: string;
     order: number;
     active: boolean;
+    imageLinks: {
+        path: string;
+        url: string;
+        alt: string;
+    }[];
     id: string;
     titleDescription: string;
     size: string;
@@ -139,11 +144,6 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     price: number;
     stockStatus: boolean;
     stockVolume: number;
-    imageLinks: {
-        path: string;
-        url: string;
-        alt: string;
-    }[];
     aboutTitle: string;
     aboutDescription: string;
     howToUseTitle: string;
