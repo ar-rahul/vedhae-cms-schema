@@ -7,5 +7,5 @@ export const ProductHeroSchema = z.object({
         title: z.string().optional(),
         subtitle: z.string().optional(),
     }),
-    image: ImageAssetSchema,
+    imageLinks: z.array(ImageAssetSchema).default([]),
 });

@@ -12,7 +12,7 @@ export declare const ProductHeroSchema: z.ZodObject<{
         title?: string | undefined;
         subtitle?: string | undefined;
     }>;
-    image: z.ZodObject<{
+    imageLinks: z.ZodDefault<z.ZodArray<z.ZodObject<{
         url: z.ZodString;
         path: z.ZodString;
         alt: z.ZodString;
@@ -24,30 +24,30 @@ export declare const ProductHeroSchema: z.ZodObject<{
         path: string;
         url: string;
         alt: string;
-    }>;
+    }>, "many">>;
 }, "strip", z.ZodTypeAny, {
-    image: {
+    page: "products";
+    active: boolean;
+    imageLinks: {
         path: string;
         url: string;
         alt: string;
-    };
-    page: "products";
-    active: boolean;
+    }[];
     content: {
         title?: string | undefined;
         subtitle?: string | undefined;
     };
 }, {
-    image: {
-        path: string;
-        url: string;
-        alt: string;
-    };
     page: "products";
     active: boolean;
     content: {
         title?: string | undefined;
         subtitle?: string | undefined;
     };
+    imageLinks?: {
+        path: string;
+        url: string;
+        alt: string;
+    }[] | undefined;
 }>;
 export type ProductHero = z.infer<typeof ProductHeroSchema>;
