@@ -10,7 +10,7 @@ export const ProductHeroSchema = z.object({
     subtitle: z.string().optional(),
   }),
 
-  image: ImageAssetSchema,
+  imageLinks:  z.array(ImageAssetSchema).default([]),
 });
 
 export type ProductHero = z.infer<typeof ProductHeroSchema>;
