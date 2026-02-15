@@ -8,12 +8,12 @@ export declare const CardItemSchema: z.ZodObject<{
         path: z.ZodString;
         alt: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }, {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }>;
 }, "strip", z.ZodTypeAny, {
@@ -21,8 +21,8 @@ export declare const CardItemSchema: z.ZodObject<{
     link: string;
     order: number;
     image: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     };
 }, {
@@ -30,8 +30,8 @@ export declare const CardItemSchema: z.ZodObject<{
     link: string;
     order: number;
     image: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     };
 }>;
@@ -50,12 +50,12 @@ export declare const CardSectionSchema: z.ZodObject<{
             path: z.ZodString;
             alt: z.ZodString;
         }, "strip", z.ZodTypeAny, {
-            path: string;
             url: string;
+            path: string;
             alt: string;
         }, {
-            path: string;
             url: string;
+            path: string;
             alt: string;
         }>;
     }, "strip", z.ZodTypeAny, {
@@ -63,8 +63,8 @@ export declare const CardSectionSchema: z.ZodObject<{
         link: string;
         order: number;
         image: {
-            path: string;
             url: string;
+            path: string;
             alt: string;
         };
     }, {
@@ -72,8 +72,8 @@ export declare const CardSectionSchema: z.ZodObject<{
         link: string;
         order: number;
         image: {
-            path: string;
             url: string;
+            path: string;
             alt: string;
         };
     }>, "many">;
@@ -88,8 +88,8 @@ export declare const CardSectionSchema: z.ZodObject<{
         link: string;
         order: number;
         image: {
-            path: string;
             url: string;
+            path: string;
             alt: string;
         };
     }[];
@@ -104,8 +104,8 @@ export declare const CardSectionSchema: z.ZodObject<{
         link: string;
         order: number;
         image: {
-            path: string;
             url: string;
+            path: string;
             alt: string;
         };
     }[];

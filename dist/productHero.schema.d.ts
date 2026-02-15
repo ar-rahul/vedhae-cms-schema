@@ -17,20 +17,20 @@ export declare const ProductHeroSchema: z.ZodObject<{
         path: z.ZodString;
         alt: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }, {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }>, "many">>;
 }, "strip", z.ZodTypeAny, {
     page: "products";
     active: boolean;
     imageLinks: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }[];
     content: {
@@ -45,8 +45,8 @@ export declare const ProductHeroSchema: z.ZodObject<{
         subtitle?: string | undefined;
     };
     imageLinks?: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }[] | undefined;
 }>;

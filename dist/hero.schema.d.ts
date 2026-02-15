@@ -13,12 +13,12 @@ export declare const HeroSectionSchema: z.ZodObject<{
         path: z.ZodString;
         alt: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }, {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }>, "many">>;
 }, "strip", z.ZodTypeAny, {
@@ -30,8 +30,8 @@ export declare const HeroSectionSchema: z.ZodObject<{
     ctaText: string;
     ctaLink: string;
     imageLinks: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }[];
     description?: string | undefined;
@@ -45,8 +45,8 @@ export declare const HeroSectionSchema: z.ZodObject<{
     ctaLink: string;
     description?: string | undefined;
     imageLinks?: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }[] | undefined;
 }>;

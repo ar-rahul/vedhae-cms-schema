@@ -21,12 +21,12 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
         path: z.ZodString;
         alt: z.ZodString;
     }, "strip", z.ZodTypeAny, {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }, {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }>, "many">;
     aboutTitle: z.ZodString;
@@ -44,8 +44,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     order: number;
     active: boolean;
     imageLinks: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }[];
     id: string;
@@ -73,8 +73,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     order: number;
     active: boolean;
     imageLinks: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }[];
     id: string;
@@ -102,8 +102,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     order: number;
     active: boolean;
     imageLinks: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }[];
     id: string;
@@ -131,8 +131,8 @@ export declare const ProductSchema: z.ZodEffects<z.ZodObject<{
     order: number;
     active: boolean;
     imageLinks: {
-        path: string;
         url: string;
+        path: string;
         alt: string;
     }[];
     id: string;
