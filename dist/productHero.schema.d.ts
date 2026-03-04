@@ -16,14 +16,17 @@ export declare const ProductHeroSchema: z.ZodObject<{
         url: z.ZodString;
         path: z.ZodString;
         alt: z.ZodString;
+        desc: z.ZodOptional<z.ZodString>;
     }, "strip", z.ZodTypeAny, {
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }, {
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }>, "many">>;
 }, "strip", z.ZodTypeAny, {
     page: "products";
@@ -32,6 +35,7 @@ export declare const ProductHeroSchema: z.ZodObject<{
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }[];
     content: {
         title?: string | undefined;
@@ -48,6 +52,7 @@ export declare const ProductHeroSchema: z.ZodObject<{
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }[] | undefined;
 }>;
 export type ProductHero = z.infer<typeof ProductHeroSchema>;

@@ -12,14 +12,17 @@ export declare const HeroSectionSchema: z.ZodObject<{
         url: z.ZodString;
         path: z.ZodString;
         alt: z.ZodString;
+        desc: z.ZodOptional<z.ZodString>;
     }, "strip", z.ZodTypeAny, {
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }, {
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }>, "many">>;
 }, "strip", z.ZodTypeAny, {
     title: string;
@@ -33,6 +36,7 @@ export declare const HeroSectionSchema: z.ZodObject<{
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }[];
     description?: string | undefined;
 }, {
@@ -48,6 +52,7 @@ export declare const HeroSectionSchema: z.ZodObject<{
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }[] | undefined;
 }>;
 export type HeroSection = z.infer<typeof HeroSectionSchema>;

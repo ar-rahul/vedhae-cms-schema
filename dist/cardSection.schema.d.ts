@@ -7,14 +7,17 @@ export declare const CardItemSchema: z.ZodObject<{
         url: z.ZodString;
         path: z.ZodString;
         alt: z.ZodString;
+        desc: z.ZodOptional<z.ZodString>;
     }, "strip", z.ZodTypeAny, {
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }, {
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     }>;
 }, "strip", z.ZodTypeAny, {
     name: string;
@@ -24,6 +27,7 @@ export declare const CardItemSchema: z.ZodObject<{
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     };
 }, {
     name: string;
@@ -33,6 +37,7 @@ export declare const CardItemSchema: z.ZodObject<{
         url: string;
         path: string;
         alt: string;
+        desc?: string | undefined;
     };
 }>;
 export declare const CardSectionSchema: z.ZodObject<{
@@ -49,14 +54,17 @@ export declare const CardSectionSchema: z.ZodObject<{
             url: z.ZodString;
             path: z.ZodString;
             alt: z.ZodString;
+            desc: z.ZodOptional<z.ZodString>;
         }, "strip", z.ZodTypeAny, {
             url: string;
             path: string;
             alt: string;
+            desc?: string | undefined;
         }, {
             url: string;
             path: string;
             alt: string;
+            desc?: string | undefined;
         }>;
     }, "strip", z.ZodTypeAny, {
         name: string;
@@ -66,6 +74,7 @@ export declare const CardSectionSchema: z.ZodObject<{
             url: string;
             path: string;
             alt: string;
+            desc?: string | undefined;
         };
     }, {
         name: string;
@@ -75,6 +84,7 @@ export declare const CardSectionSchema: z.ZodObject<{
             url: string;
             path: string;
             alt: string;
+            desc?: string | undefined;
         };
     }>, "many">;
 }, "strip", z.ZodTypeAny, {
@@ -91,6 +101,7 @@ export declare const CardSectionSchema: z.ZodObject<{
             url: string;
             path: string;
             alt: string;
+            desc?: string | undefined;
         };
     }[];
 }, {
@@ -107,6 +118,7 @@ export declare const CardSectionSchema: z.ZodObject<{
             url: string;
             path: string;
             alt: string;
+            desc?: string | undefined;
         };
     }[];
 }>;
