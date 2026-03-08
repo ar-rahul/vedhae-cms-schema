@@ -29,8 +29,8 @@ export declare const ProductHeroSchema: z.ZodObject<{
         desc?: string | undefined;
     }>, "many">>;
 }, "strip", z.ZodTypeAny, {
-    page: "products";
     active: boolean;
+    page: "products";
     imageLinks: {
         url: string;
         path: string;
@@ -42,8 +42,8 @@ export declare const ProductHeroSchema: z.ZodObject<{
         subtitle?: string | undefined;
     };
 }, {
-    page: "products";
     active: boolean;
+    page: "products";
     content: {
         title?: string | undefined;
         subtitle?: string | undefined;

@@ -26,9 +26,9 @@ export declare const HeroSectionSchema: z.ZodObject<{
     }>, "many">>;
 }, "strip", z.ZodTypeAny, {
     title: string;
+    active: boolean;
     page: "home";
     section: "hero";
-    active: boolean;
     tagline: string;
     ctaText: string;
     ctaLink: string;
@@ -41,9 +41,9 @@ export declare const HeroSectionSchema: z.ZodObject<{
     description?: string | undefined;
 }, {
     title: string;
+    active: boolean;
     page: "home";
     section: "hero";
-    active: boolean;
     tagline: string;
     ctaText: string;
     ctaLink: string;
