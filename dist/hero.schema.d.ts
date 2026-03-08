@@ -24,6 +24,16 @@ export declare const HeroSectionSchema: z.ZodObject<{
         alt: string;
         desc?: string | undefined;
     }>, "many">>;
+    banner: z.ZodDefault<z.ZodObject<{
+        enabled: z.ZodDefault<z.ZodBoolean>;
+        text: z.ZodOptional<z.ZodString>;
+    }, "strip", z.ZodTypeAny, {
+        enabled: boolean;
+        text?: string | undefined;
+    }, {
+        enabled?: boolean | undefined;
+        text?: string | undefined;
+    }>>;
 }, "strip", z.ZodTypeAny, {
     title: string;
     page: "home";
@@ -38,6 +48,10 @@ export declare const HeroSectionSchema: z.ZodObject<{
         alt: string;
         desc?: string | undefined;
     }[];
+    banner: {
+        enabled: boolean;
+        text?: string | undefined;
+    };
     description?: string | undefined;
 }, {
     title: string;
@@ -54,5 +68,9 @@ export declare const HeroSectionSchema: z.ZodObject<{
         alt: string;
         desc?: string | undefined;
     }[] | undefined;
+    banner?: {
+        enabled?: boolean | undefined;
+        text?: string | undefined;
+    } | undefined;
 }>;
 export type HeroSection = z.infer<typeof HeroSectionSchema>;
